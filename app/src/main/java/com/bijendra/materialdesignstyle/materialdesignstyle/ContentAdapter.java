@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 /**
  * Created by Newdream on 18-Nov-16.
@@ -29,6 +30,8 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         // no-op
+        if(position==(LENGTH-1))
+            Toast.makeText(holder.itemView.getContext(),"Fetch more elements",Toast.LENGTH_LONG).show();
 
     }
 
